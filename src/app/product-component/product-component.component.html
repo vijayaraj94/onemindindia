@@ -1,0 +1,75 @@
+<mat-progress-spinner *ngIf="showLoading" class="example-margin spinner-ml50" [color]="color" [mode]="mode" [value]="value"> </mat-progress-spinner>
+<div class="content-details">
+  <h5>Product Details</h5>
+  <div class="table-class">
+    <button class="btn btn-sm btn-primary" (click)="addNewProduct()">Add Product</button><br />
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody tyle="height: 10px !important; overflow: scroll; ">
+        <tr *ngFor="let item of productList">
+          <td>{{item.productName}}</td>
+          <td>{{item.availableQuantity}}</td>
+          <td><button class="btn btn-sm btn-info" (click)="orderProduct(item)">Order</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<ng-template #productModal>
+  <h2 matDialogTitle>Product Details</h2>
+  <form autocomplete="off" class="bssForm" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+    <div class="row dr-form">
+      <div class="col-sm-12">
+        <mat-form-field>
+          <input matInput placeholder="Product Name" name="productName" [(ngModel)]="productArray.productName" required>
+        </mat-form-field>
+      </div>
+      <div class="col-sm-12">
+        <mat-form-field>
+          <input matInput type="number" placeholder="Quantity" name="availableQuantity"
+            [(ngModel)]="productArray.availableQuantity" required>
+        </mat-form-field>
+      </div>
+      <div class="col-sm-12 btnGroup" align="center">
+        <button mat-button class="submitBtn">Save</button>
+        <button mat-button class="cancelBtn-model" matDialogClose="no" type="button">No</button>
+      </div>
+    </div>
+  </form>
+</ng-template>
+
+
+<!-- Order -->
+
+<ng-template #orderProductModal>
+    <h2 matDialogTitle>Order Details</h2>
+    <form autocomplete="off" class="bssForm" name="form" (ngSubmit)="f.form.valid && submitOrder()" #f="ngForm" novalidate>
+      <div class="row dr-form">
+        <div class="col-sm-12">
+          <mat-form-field>
+            <input matInput placeholder="Product Name" readonly name="currentOrderProduct.productName" [(ngModel)]="currentOrderProduct.productName">
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12">
+          <mat-form-field>
+            <input matInput type="number" placeholder="Quantity" name="orderQuantity"
+              [(ngModel)]="orderQuantity" required>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 btnGroup" align="center">
+          <button mat-button class="submitBtn">Place Order</button>
+          <button mat-button class="cancelBtn-model" matDialogClose="no" type="button">No</button>
+        </div>
+      </div>
+    </form>
+  </ng-template>

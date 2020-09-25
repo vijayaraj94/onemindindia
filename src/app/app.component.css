@@ -1,0 +1,88 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background-color: #1367a4;
+}
+.footer {
+    background-color: #676767;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: right;
+    padding: 5px;
+}
+.content {
+    flex: 1;
+    overflow: auto;
+}
+.icon-color {
+    color: #ffffff;
+}
+.verticalBar {
+    border-left: solid 1px #fff;
+    opacity: 0.3;
+    width: 1px;
+    margin: 0px 20px;
+    height: 26px;
+    position: relative;
+    padding: 10px 0px;
+    top: -3px;
+}
+.navbar-brand {
+    margin-right: 0rem;
+    color: #ffffff;
+}
+.page-content {
+    /* padding: 20px; */
+    margin: 0 20%;
+}
+.userLog {
+    background-color: #1367a4;
+    border: 1px solid #fff;
+}
+#userInfo {
+    margin-right: -40px;
+}
+.cr-poniter {
+    cursor: pointer;
+}
+.user-details {
+    width: 150px;
+}
+.accountInfo {
+    text-align: center;
+    padding-top: 10px;
+}
+.logOutBtn, .logOutBtn:hover {
+    width:auto;
+    margin: auto;
+    /*background: #1367a4; */
+    background: #ef200a;
+    color: #fff;
+}
+.btnColor {
+    background-color: #1367a4;
+}
+.usernameCls {
+    padding-top: 10px !important;
+}
+.example-button-row button:focus {
+    outline: none !important
+}
+.mat-menu-item {
+    line-height: 35px !important;
+    height: 35px !important;
+    border: 1px solid #f3ecec;
+}
+.mat-menu-item:focus {
+    outline: none !important;
+}
+.navbar {
+    padding: 15px;
+}

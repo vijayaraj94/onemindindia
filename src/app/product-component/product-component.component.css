@@ -1,0 +1,28 @@
+.table-class {
+    padding: 10px;
+}
+.table-bordered {
+    margin-top: 10px;
+}
+.mat-form-field {
+    width: 100%;
+}
+.content-details {
+    padding: 20px 0;
+}
+.submitBtn {
+    background: orange;
+    color: #ffffff;
+}
+.cancelBtn-model {
+    background: gray;
+    color: #ffffff;
+}
+.btnGroup button {
+    margin: 5px;
+}
+.spinner-ml50 {
+    margin: 0 40%;
+}
+
+
